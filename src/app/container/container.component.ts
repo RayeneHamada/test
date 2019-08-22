@@ -9,7 +9,7 @@ import { PersonneService } from './container.service';
 export class ContainerComponent implements OnInit {
 
 
-  personnes:any;
+  personnes:any[];
  
   constructor(public personnesService:PersonneService) { }
 
@@ -19,6 +19,7 @@ export class ContainerComponent implements OnInit {
 
   delete(i)
   {
-    this.personnes.splice(i,1)
+   
+    this.personnesService.personnes.splice(i,1);
   }
 }
